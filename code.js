@@ -12,6 +12,7 @@ function binarySearch(list, element) {
                         middle = middle -1;
                     }
                 return (middle +1);
+            }
             if (list[middle] < element)
                 first = middle + 1;
             else
