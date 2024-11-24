@@ -5,8 +5,13 @@ function binarySearch(list, element) {
     while (first <= last)
         {
             middle = Math.floor(first + (last - first) / 2);
-            if (list[middle] === element)
-                return middle;
+            if (list[middle] == element)
+            {
+                while (list[middle] == element)
+                    {
+                        middle = middle -1;
+                    }
+                return (middle +1);
             if (list[middle] < element)
                 first = middle + 1;
             else
