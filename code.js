@@ -1,8 +1,14 @@
 function binarySearch(list, element) {
-    for (i = 0; i < list.length; i++)
+    var first = 0, last = (list.length - 1), middle = (first + last) /2;
+    while (first <= last)
         {
-            if (list[i] == element)
-                return i;
+            middle = Math.floor((first + last) / 2);
+            if (list[middle] == element)
+                return middle;
+            if (list[middle] < element)
+                first = middle + 1;
+            if (list[middle] > element)
+                last = middle -1;
         }
     return -1;
 }
